@@ -6,8 +6,18 @@ public class AddressBookSystem {
 
     String FirstName,LastName,Gmail,Address,City,State;
     int zipCode;
-    double PhnNumber;
-
+    long PhnNumber;
+    void person(String FirstName,String LastName,String Gmail,String Address,String City,String State,int zipCode,long PhnNumber)
+    {
+        this.FirstName = FirstName;
+        this.LastName = LastName;
+        this.Gmail = Gmail;
+        this.Address = Address;
+        this.City = City;
+        this.State = State;
+        this.zipCode = zipCode;
+        this.PhnNumber = PhnNumber;
+              }
     public String getFirstName() {
         return FirstName;
     }
@@ -62,13 +72,15 @@ public class AddressBookSystem {
         this.zipCode = zipCode;
     }
 
-    public double getPhnNumber() {
+    public long getPhnNumber() {
         return PhnNumber;
     }
 
-    public void setPhnNumber(double phnNumber) {
+    public void setPhnNumber(long phnNumber) {
         PhnNumber = phnNumber;
     }
+
+
     void Contact(){
         System.out.println("First: "+FirstName);
         System.out.println("LastName: "+LastName);
@@ -84,23 +96,7 @@ public class AddressBookSystem {
         public static void main(String[] args){
             System.out.println("Welcome to Address Book Program");
             AddressBookSystem Address = new AddressBookSystem();
-            Scanner input = new Scanner(System.in);
-            System.out.println("FirstName: ");
-            Address.FirstName=input.nextLine();
-            System.out.println("LastName: ");
-            Address.LastName=input.nextLine();
-            System.out.println("Gmail id: ");
-            Address.Gmail = input.nextLine();
-            System.out.println("Address: ");
-            Address.Address= input.nextLine();
-            System.out.println("City: ");
-            Address.City=input.nextLine();
-            System.out.println("State: ");
-            Address.State=input.nextLine();
-            System.out.println("ZipCode: ");
-            Address.zipCode=input.nextInt();
-            System.out.println("Phone: ");
-            Address.PhnNumber=input.nextDouble();
+            Address.person("Sai","Tarun","Sai@gmail.com","HWK","Vizag","AP",530048,9381217387l);
             Address.Contact();
         }
     }

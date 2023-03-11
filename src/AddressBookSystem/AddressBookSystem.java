@@ -6,8 +6,18 @@ public class AddressBookSystem {
 
     String FirstName,LastName,Gmail,Address,City,State;
     int zipCode;
-    double PhnNumber;
-
+    long PhnNumber;
+    void person(String FirstName,String LastName,String Gmail,String Address,String City,String State,int zipCode,long PhnNumber)
+    {
+        this.FirstName = FirstName;
+        this.LastName = LastName;
+        this.Gmail = Gmail;
+        this.Address = Address;
+        this.City = City;
+        this.State = State;
+        this.zipCode = zipCode;
+        this.PhnNumber = PhnNumber;
+              }
     public String getFirstName() {
         return FirstName;
     }
@@ -62,13 +72,15 @@ public class AddressBookSystem {
         this.zipCode = zipCode;
     }
 
-    public double getPhnNumber() {
+    public long getPhnNumber() {
         return PhnNumber;
     }
 
-    public void setPhnNumber(double phnNumber) {
+    public void setPhnNumber(long phnNumber) {
         PhnNumber = phnNumber;
     }
+
+
     void Contact(){
         System.out.println("First: "+FirstName);
         System.out.println("LastName: "+LastName);
@@ -100,7 +112,10 @@ public class AddressBookSystem {
             System.out.println("ZipCode: ");
             Address.zipCode=input.nextInt();
             System.out.println("Phone: ");
-            Address.PhnNumber=input.nextDouble();
+            Address.PhnNumber=input.nextLong();
+            Address.Contact();
+            System.out.println("2nd contact:  ");
+            Address.person("Sai","Tarun","Sai@gmail.com","HWK","Vizag","AP",530048,9381217387l);
             Address.Contact();
         }
     }
