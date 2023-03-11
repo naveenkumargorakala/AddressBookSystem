@@ -96,6 +96,25 @@ public class AddressBookSystem {
         public static void main(String[] args){
             System.out.println("Welcome to Address Book Program");
             AddressBookSystem Address = new AddressBookSystem();
+            Scanner input = new Scanner(System.in);
+            System.out.println("FirstName: ");
+            Address.FirstName=input.nextLine();
+            System.out.println("LastName: ");
+            Address.LastName=input.nextLine();
+            System.out.println("Gmail id: ");
+            Address.Gmail = input.nextLine();
+            System.out.println("Address: ");
+            Address.Address= input.nextLine();
+            System.out.println("City: ");
+            Address.City=input.nextLine();
+            System.out.println("State: ");
+            Address.State=input.nextLine();
+            System.out.println("ZipCode: ");
+            Address.zipCode=input.nextInt();
+            System.out.println("Phone: ");
+            Address.PhnNumber=input.nextLong();
+            Address.Contact();
+            System.out.println("2nd contact:  ");
             Address.person("Sai","Tarun","Sai@gmail.com","HWK","Vizag","AP",530048,9381217387l);
             Address.Contact();
         }
